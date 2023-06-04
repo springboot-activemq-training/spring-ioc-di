@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+<!--    Annotation bases configuration-->
+    <context:component-scan base-package="com.example">
+    </context:component-scan>
+
+<!--        <bean id="engineer" class="org.example.Engineer" >-->
+<!--    &lt;!&ndash;        <property name="field" value="BACKEND"></property>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <property name="computer" ref="computer"></property>&ndash;&gt;-->
+<!--            <constructor-arg name="field" value="BACKEND">-->
+<!--            </constructor-arg>-->
+<!--            <constructor-arg name="computer" ref="computer">-->
+<!--            </constructor-arg>-->
+
+<!--        </bean>-->
+
+<!--        <bean id="computer" class="org.example.Computer">-->
+<!--        </bean>-->
+</beans>
+
