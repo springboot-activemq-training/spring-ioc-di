@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-@Configuration
-@ComponentScan(basePackages = "org.example")
+@Configuration                       //Indicate this is a configuration class
+@ComponentScan(basePackages = "org.example") // Tells spring to scan the given package for beans
 public class ProjectConfig {
     @Value("${activemq.url}")
     private String url;
@@ -20,14 +20,14 @@ public class ProjectConfig {
 //        return engineer;
 //    }
 
-    @Bean
-    @Primary
+    @Bean // This tells spring to create a bean of the Computer type
+    @Primary // If more than one beans are found, spring will use this one
     public Computer desktop() {
         return new DesktopComputer();
     }
 
     @Bean
-    @Qualifier("laptop")
+    @Qualifier("laptop") // The value of the @Qualifier annotation can be use to get this particular bean when multiple beans are found
     public Computer laptop() {
         return new LaptopComputer();
     }
